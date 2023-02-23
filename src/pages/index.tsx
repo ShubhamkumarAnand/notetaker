@@ -4,6 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import React, { useState } from "react";
 import { Header } from "~/components/Header";
+import { NoteEditor } from "~/components/NoteEditor";
 import { type RouterOutputs, api } from "~/utils/api";
 
 const Home: NextPage = () => {
@@ -76,7 +77,9 @@ const Content: React.FC = () => {
 					}}
 				/>
 			</div>
-			<div className="col-span-3"></div>
+			<div className="col-span-3">
+				<NoteEditor />
+			</div>
 		</div>
 	);
 };
