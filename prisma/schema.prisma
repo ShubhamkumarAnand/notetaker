@@ -70,7 +70,7 @@ model Topic {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  titles    String
+  title     String
   user      User     @relation(fields: [userId], references: [id])
   userId    String
   notes     Note[]
