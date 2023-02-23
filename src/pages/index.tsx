@@ -26,12 +26,10 @@ const Home: NextPage = () => {
 export default Home;
 
 type Topic = RouterOutputs["topic"]["getAll"][0];
-type Note = RouterOutputs["note"]["getAll"][0];
 
 const Content: React.FC = () => {
 	const { data: sessionData } = useSession();
 	const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
-	const [selectedNote, setSelectedNote] = useState<Note | null>(null);
 	const { data: topics, refetch: refetchTopics } = api.topic.getAll.useQuery(
 		undefined,
 		{
