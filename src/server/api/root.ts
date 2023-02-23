@@ -11,7 +11,7 @@ import { createTRPCRouter } from "~/server/api/trpc";
 export const appRouter = createTRPCRouter({
 	example: exampleRouter,
 	topic: topicRouter,
-	notes: noteRoute,
+	note: noteRoute,
 });
 
 // export type definition of API
